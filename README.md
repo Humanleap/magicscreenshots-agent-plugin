@@ -1,0 +1,2 @@
+# magicscreenshots-agent-plugin
+Search real App Store listing screenshots and preview videos for design inspiration, then generate, restyle or localize the user's own App Store screenshots with MagicScreenshots. Use for App Store screenshot design, listing research, localization and app preview references.

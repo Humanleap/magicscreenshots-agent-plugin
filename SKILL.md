@@ -24,19 +24,19 @@ pnpm dlx magic-screenshots screens duolingo --out ./reference
 
 1. **Reference real results.** Do not invent apps, chart ranks, screenshot styles or history.
 2. **Use third-party assets as references.** Their developers own them. Never ship another app's screenshots or preview footage as the user's work.
-3. **Review paid generation.** Show any required payment/sign-in handoff and the overview. Call `approve_restyle` only after the human approves it.
+3. **Approve spending before starting.** Confirm the paid operation and the human’s spending limit before `create_restyle` or `create_localize`; do not start chargeable work without approval. Show the overview afterward and call `approve_restyle` only after the human approves that design.
 4. **Keep output truthful.** Generated screenshots must represent the user's actual app; a pending job is unfinished.
 
 ## Authentication
 
-Public library search/read tools need no key. Generation, live lookup, video downloads and history use a key through `Authorization: Bearer` or secure CLI `MAGICSCREENSHOTS_API_KEY` configuration. If the user requests generation and has no key, `create_api_key` returns a token and `claim_url`; keep the token private and give the human the claim URL. Do not enter payment details.
+Public library search/read tools need no key. For authenticated features, the human sets up a supported connection or secure CLI configuration using the official agent setup page. Never request, print, save or transmit API keys, passwords or authentication codes in conversation or tool arguments. Do not create credentials on the human’s behalf. If the assistant platform cannot provide secure authentication, use public library reads and hand the requested paid workflow to the official website. The human completes sign-in and payment there.
 
 ## Core Workflow
 
 1. **Define the brief.** Identify the app category, audience and desired feel. Read `list_directory_categories` or `list_directory_tags` when needed.
 2. **Search references.** Use `list_directory_apps` by query, category, chart (`free` or `grossing`) and style tag, setting `platform: "ios"` for App Store research. Select relevant apps from actual results.
 3. **Inspect the images.** Read `get_directory_app` and `get_directory_screens` for a few candidates. Compare headline, colour, device treatment and order of benefits; cite the apps you inspected.
-4. **Prepare the user's generation.** Use `get_screenshots` to identify the user's app, then `create_restyle` with its `source_app` and chosen `inspiration_slug`.
+4. **Prepare the user's generation.** After secure authentication and spending approval, use `get_screenshots` to identify the user's app, then `create_restyle` with its `source_app` and chosen `inspiration_slug`.
 5. **Review and finish.** Poll `get_job_group` for `overview_url`, show it, and call `approve_restyle` only after approval. Poll again for final output URLs.
 
 ## Essential Tools

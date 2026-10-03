@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "magicscreenshots": {
+      "type": "http",
+      "url": "https://www.magicscreenshots.com/api/mcp"
+    }
+  }
+}

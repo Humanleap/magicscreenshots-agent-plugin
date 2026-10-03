@@ -1,0 +1,23 @@
+{
+  "name": "magicscreenshots-agent",
+  "owner": {
+    "name": "Blake Folgado",
+    "email": "blake@humanleap.com",
+    "url": "https://humanleap.com"
+  },
+  "metadata": {
+    "description": "Search real App Store listing screenshots and preview videos for design inspiration, then generate, restyle or localize the user's own App Store screenshots with MagicScreenshots. Use for App Store screenshot design, listing research, localization and app preview references.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "magicscreenshots",
+      "description": "Search real App Store listing screenshots and preview videos for design inspiration, then generate, restyle or localize the user's own App Store screenshots with MagicScreenshots. Use for App Store screenshot design, listing research, localization and app preview references.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/magicscreenshots"
+      ]
+    }
+  ]
+}

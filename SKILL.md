@@ -34,7 +34,7 @@ Public library search/read tools need no key. Generation, live lookup, video dow
 ## Core Workflow
 
 1. **Define the brief.** Identify the app category, audience and desired feel. Read `list_directory_categories` or `list_directory_tags` when needed.
-2. **Search references.** Use `list_directory_apps` by query, category, chart (`free` or `grossing`) and style tag. Select relevant apps from actual results.
+2. **Search references.** Use `list_directory_apps` by query, category, chart (`free` or `grossing`) and style tag, setting `platform: "ios"` for App Store research. Select relevant apps from actual results.
 3. **Inspect the images.** Read `get_directory_app` and `get_directory_screens` for a few candidates. Compare headline, colour, device treatment and order of benefits; cite the apps you inspected.
 4. **Prepare the user's generation.** Use `get_screenshots` to identify the user's app, then `create_restyle` with its `source_app` and chosen `inspiration_slug`.
 5. **Review and finish.** Poll `get_job_group` for `overview_url`, show it, and call `approve_restyle` only after approval. Poll again for final output URLs.
